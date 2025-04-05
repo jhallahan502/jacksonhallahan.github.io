@@ -81,10 +81,13 @@
       justify-content: space-between;
       gap: 2rem;
       margin-top: 2rem;
+      align-items: flex-start;
+      padding-left: 244px;
     }
     .portfolio-text {
       flex: 1;
-      font-weight: 500;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
     ul.skills-list {
       flex: 1;
@@ -92,6 +95,9 @@
       padding-left: 1.5rem;
       font-size: 1.1rem;
       line-height: 1.6;
+    }
+    ul.skills-list li strong {
+      font-weight: 700;
     }
     @media (max-width: 768px) {
       header {
@@ -110,6 +116,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-left: 0;
       }
       .portfolio-text, ul.skills-list {
         flex: unset;
@@ -141,10 +148,10 @@
           This portfolio highlights some recent projects in:
         </div>
         <ul class="skills-list">
-          <li>Security: Network, Database, Information</li>
-          <li>Database Design</li>
-          <li>Software Development (C#)</li>
-          <li>Systems Analysis and Design</li>
+          <li><strong>Security: Network, Database, Information</strong></li>
+          <li><strong>Database Design</strong></li>
+          <li><strong>Software Development (C#)</strong></li>
+          <li><strong>Systems Analysis and Design</strong></li>
         </ul>
       </div>
     </div>
