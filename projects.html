@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Projects | Jackson Hallahan</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+    }
     nav {
       background-color: black;
       padding: 1rem 2rem;
@@ -30,36 +36,66 @@
       font-weight: bold;
       text-transform: uppercase;
       font-size: 0.9rem;
+      position: relative;
     }
-    .nav-links a:hover {
-      text-decoration: underline;
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #FFD700;
     }
     header {
-      padding: 3rem 2rem 1rem;
       text-align: center;
+      padding: 2rem 1rem 0;
     }
-    section {
-      padding: 0 2rem 3rem;
-      max-width: 900px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
       margin: auto;
     }
-    ul.projects {
-      list-style: none;
-      padding: 0;
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: pointer;
     }
-    ul.projects li {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 12px;
+    .card:hover {
+      background-color: #fff8dc;
     }
-    ul.projects li a {
-      text-decoration: none;
-      color: black;
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-weight: bold;
+      font-size: 1.1rem;
     }
-    ul.projects li a:hover {
-      text-decoration: underline;
+    .card-header i {
+      margin-right: 0.5rem;
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    .card.open .chevron {
+      transform: rotate(90deg);
+    }
+    .project-list {
+      margin-top: 1rem;
+      display: none;
+    }
+    .card.open .project-list {
+      display: block;
+    }
+    .project-list li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -73,12 +109,72 @@
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-  <header><h1>Projects</h1></header>
-  <section>
-    <ul class="projects">
-      <li><strong>Tip Calculator (C#)</strong> — Simple tip calculator using method overloading. <a href="#">View Project</a></li>
-      <li><strong>Letter Demo (C#)</strong> — Demonstrates inheritance and class behavior. <a href="#">View Project</a></li>
-    </ul>
+
+  <header>
+    <h1>Project Categories</h1>
+  </header>
+
+  <section class="grid">
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-shield-alt"></i> Security</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li>Network Scanning Lab</li>
+        <li>Firewall Configuration</li>
+        <li>Database Security Analysis</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-database"></i> Database Design</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li>SQL Normalization Practice</li>
+        <li>Entity Relationship Diagrams</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-code"></i> Software Development (C#)</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li>Tip Calculator</li>
+        <li>Letter Demo</li>
+        <li>Classified Ad Generator</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-sitemap"></i> Systems Analysis</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li>Use Case Diagrams</li>
+        <li>System Proposal Presentation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-globe"></i> Web Development</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li>Personal Portfolio Website</li>
+        <li>Basic Web Layout Project</li>
+      </ul>
+    </div>
   </section>
+
+  <script>
+    function toggleCard(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
+
