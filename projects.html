@@ -5,35 +5,58 @@
   <title>Projects | Jackson Hallahan</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    nav {
-      background-color: black;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    
+nav {
+  background-color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+    header { padding: 3rem 2rem 1rem; text-align: center; }
+    section { padding: 0 2rem 3rem; max-width: 900px; margin: auto; }
+    ul.projects { list-style: none; padding: 0; }
+    ul.projects li { margin: 1.5rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 12px; }
+    ul.projects li a { text-decoration: none; color: black; font-weight: bold; }
+    ul.projects li a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <nav>
+  
+<nav>
+  <div class="nav-title">Jackson Hallahan's Portfolio</div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="resume.html">Resume</a>
     <a href="contact.html">Contact</a>
-  </nav>
-  <header>
-    <h1>Projects</h1>
-  </header>
+  </div>
+</nav>
+
+  <header><h1>Projects</h1></header>
   <section>
     <ul class="projects">
       <li><strong>Tip Calculator (C#)</strong> — Simple tip calculator using method overloading. <a href="#">View Project</a></li>
