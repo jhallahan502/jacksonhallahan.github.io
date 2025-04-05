@@ -39,9 +39,19 @@
       font-weight: bold;
       text-transform: uppercase;
       font-size: 0.9rem;
+      position: relative;
     }
     .nav-links a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #FFD700;
     }
     header {
       display: flex;
@@ -80,7 +90,7 @@
     }
     .portfolio-text {
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 400;
       margin-bottom: 1rem;
     }
     ul.skills-list {
@@ -144,5 +154,4 @@
   </header>
 </body>
 </html>
-
 
