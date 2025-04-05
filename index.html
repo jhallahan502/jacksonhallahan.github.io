@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,7 @@
   <title>Jackson Hallahan | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -18,16 +17,31 @@
     }
     nav {
       background-color: black;
-      padding: 1rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav a {
+    .nav-title {
       color: white;
-      margin: 0 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
     }
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
     }
     header {
@@ -36,52 +50,67 @@
       align-items: flex-start;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 2rem;
+      padding: 3rem 2rem;
       gap: 2rem;
     }
     header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      width: 240px;
+      height: 240px;
+      border-radius: 10px;
       object-fit: cover;
-      border: 4px solid #228B22;
+      border: 4px solid black;
       flex-shrink: 0;
     }
     .bio-wrapper {
-      max-width: 600px;
+      max-width: 700px;
+      flex: 1;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: #228B22;
-      text-align: left;
+    .intro-heading {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
     p.bio, ul.skills {
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.8;
       text-align: justify;
     }
     ul.skills {
       margin-top: 1rem;
       padding-left: 1.5rem;
     }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .bio-wrapper {
+        padding: 0 1rem;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
   </style>
 </head>
 <body>
-
   <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-title">Jackson Hallahan's Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
-
   <header>
     <img src="images/Headshot.jpg" alt="Jackson Hallahan">
-
     <div class="bio-wrapper">
-      <h1>Jackson Hallahan</h1>
+      <div class="intro-heading">Hi, my name is Jackson Hallahan.</div>
       <p class="bio">
-        Hi, my name is Jackson Hallahan. Welcome to my portfolio! I am an Information Systems major, specializing in Cybersecurity at the University of Louisville's College of Business. Currently, I am a member of the ACM (Association of Computing Machinery) Cyber Defense club, and a Dean's Scholar.<br><br>
+        Welcome to my portfolio! I am an Information Systems major, specializing in Cybersecurity at the University of Louisville's College of Business. Currently, I am a member of the ACM (Association of Computing Machinery) Cyber Defense club, and a Dean's Scholar.<br><br>
         Outside of IT, I am a seasoned drummer and manager of an independent band based out of Louisville, Kentucky. I have recorded four studio albums, organized, and performed multiple tours across the U.S.
       </p>
       <ul class="skills">
@@ -94,6 +123,5 @@
       </ul>
     </div>
   </header>
-
 </body>
 </html>
