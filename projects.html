@@ -1,59 +1,105 @@
-<!-- Simplified example to demonstrate final filenames -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projects | Jackson Hallahan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #111; }
+    nav {
+      background-color: black;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-title { color: white; font-weight: bold; font-size: 1rem; }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      position: relative;
+    }
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #FFD700;
+    }
+    header { text-align: center; padding: 2rem 1rem 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .card:hover { background-color: #fff8dc; }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .card-header i { margin-right: 0.5rem; }
+    .chevron { transition: transform 0.3s ease; }
+    .card.open .chevron { transform: rotate(90deg); }
+    .project-list { margin-top: 1rem; display: none; }
+    .card.open .project-list { display: block; }
+    .project-list li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .project-list a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .project-list a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <h1>Security</h1>
-  <ul>
-    <li><a href="projects/security/firewall-lab.pdf">Firewall Lab</a></li>
-    <li><a href="projects/security/routing-lab.pdf">Routing Lab</a></li>
-    <li><a href="projects/security/SID-lab.pdf">SID Lab</a></li>
-    <li><a href="projects/security/SQL-pentest-lab.pdf">SQL Pentest Lab</a></li>
-  </ul>
+  <nav>
+    <div class="nav-title">Jackson Hallahan's Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <h1>Database Design</h1>
-  <ul>
-    <li><a href="projects/database/ERD-diagram.png">ERD Diagram (PNG)</a></li>
-    <li><a href="projects/database/ERD-lab.pdf">ERD Lab (PDF)</a></li>
-    <li><a href="projects/database/Guidebook Pro Database design.png">Guidebook Pro Design (PNG)</a></li>
-    <li><a href="projects/database/SQL-lab.pdf">SQL Lab (PDF)</a></li>
-    <li><a href="projects/database/Tiny College DB.pdf">Tiny College DB (PDF)</a></li>
-  </ul>
+  <header><h1>Project Categories</h1></header>
 
-  <h1>Software Development (C#)</h1>
-  <ul>
-    <li><a href="projects/software-dev/Program2.zip">Program 2 (ZIP)</a></li>
-    <li><a href="projects/software-dev/Program3.zip">Program 3 (ZIP)</a></li>
-    <li><a href="projects/software-dev/MINDTAP 8-10.docx">MindTap Assignment (DOCX)</a></li>
-  </ul>
+  <section class="grid">
+    <!-- All project category cards inserted here -->
+  </section>
 
-  <h1>Systems Analysis</h1>
-  <ul>
-    <li><a href="projects/systems-analysis/As-Is_ GuidebookCo.png">As-Is Diagram (PNG)</a></li>
-    <li><a href="projects/systems-analysis/Class Diagram.png">Class Diagram (PNG)</a></li>
-    <li><a href="projects/systems-analysis/System Architecture Diagram.png">System Architecture (PNG)</a></li>
-    <li><a href="projects/systems-analysis/To-Be_ Guidebook Pro.png">To-Be Diagram (PNG)</a></li>
-  </ul>
-
-  <h1>Web Development</h1>
-  <ul>
-    <li><a href="projects/web/Blue Mesa Checkout.jpg">Blue Mesa Checkout</a></li>
-    <li><a href="projects/web/Blue Mesa Trip.jpg">Blue Mesa Trip</a></li>
-    <li><a href="projects/web/Checkout.jpg">Checkout</a></li>
-    <li><a href="projects/web/Expedia and Trip cancel policy.jpg">Expedia + Cancel Policy</a></li>
-    <li><a href="projects/web/Guide Page.jpg">Guide Page</a></li>
-    <li><a href="projects/web/GuideBookPro_WBS.pdf">WBS Diagram (PDF)</a></li>
-    <li><a href="projects/web/Home Page Header.jpg">Home Page Header</a></li>
-    <li><a href="projects/web/Map Working.jpg">Map Working</a></li>
-    <li><a href="projects/web/Merch.jpg">Merch</a></li>
-    <li><a href="projects/web/Show Off Catch.jpg">Show Off Catch</a></li>
-    <li><a href="projects/web/Species.jpg">Species</a></li>
-    <li><a href="projects/web/Specis and about Home.jpg">Specis & About</a></li>
-    <li><a href="projects/web/Trip List.jpg">Trip List</a></li>
-    <li><a href="projects/web/User Flow Diagram.jpeg">User Flow Diagram</a></li>
-  </ul>
+  <script>
+    function toggleCard(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
