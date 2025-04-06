@@ -1,1 +1,156 @@
-Re-injected file coming next...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Jackson Hallahan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    nav {
+      background-color: black;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-title {
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      position: relative;
+    }
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #FFD700;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .card-header i {
+      margin-right: 0.5rem;
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    .card.open .chevron {
+      transform: rotate(90deg);
+    }
+    .description {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #555;
+      margin-top: 0.25rem;
+    }
+    .project-list {
+      margin-top: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .card.open .project-list {
+      max-height: 1000px;
+    }
+    .project-list li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .project-list a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .project-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-title">Jackson Hallahan's Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header><h1>Project Categories</h1></header>
+
+  <section class="container">
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-shield-alt"></i> Security</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <div class="description">Labs in network, database, and system hardening + Pentest project</div>
+      <ul class="project-list">
+        <li><a href="projects/security/firewall-lab.pdf" target="_blank">Firewall Lab</a></li>
+        <li><a href="projects/security/routing-lab.pdf" target="_blank">Routing Lab</a></li>
+        <li><a href="projects/security/SID-lab.pdf" target="_blank">SID Lab</a></li>
+        <li><a href="projects/security/SQL-pentest-lab.pdf" target="_blank">SQL Pentest Lab</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    function toggleCard(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
