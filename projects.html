@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projects | Jackson Hallahan</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -53,7 +53,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
       max-width: 1000px;
@@ -96,6 +96,15 @@
     }
     .project-list li {
       margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .project-list a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .project-list a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -121,9 +130,10 @@
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
       <ul class="project-list">
-        <li>Network Scanning Lab</li>
-        <li>Firewall Configuration</li>
-        <li>Database Security Analysis</li>
+        <li><a href="projects/security/firewall-lab.pdf" target="_blank">Linux Firewall Lab (PDF)</a></li>
+        <li><a href="projects/security/routing-lab.pdf" target="_blank">Routing Lab (PDF)</a></li>
+        <li><a href="projects/security/sql-pentest.pdf" target="_blank">SQL Pentesting Project (PDF)</a></li>
+        <li><a href="projects/security/sid-lab.pdf" target="_blank">SID + PowerShell Lab (PDF)</a></li>
       </ul>
     </div>
     <div class="card">
@@ -132,8 +142,9 @@
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
       <ul class="project-list">
-        <li>SQL Normalization Practice</li>
-        <li>Entity Relationship Diagrams</li>
+        <li><a href="projects/database/diagram1.png" target="_blank">ERD Diagram 1 (PNG)</a></li>
+        <li><a href="projects/database/diagram2.pdf" target="_blank">ERD Diagram 2 (PDF)</a></li>
+        <li><a href="projects/database/assignment1.pdf" target="_blank">SQL Assignment (PDF)</a></li>
       </ul>
     </div>
     <div class="card">
@@ -142,19 +153,9 @@
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
       <ul class="project-list">
-        <li>Tip Calculator</li>
-        <li>Letter Demo</li>
-        <li>Classified Ad Generator</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="card-header" onclick="toggleCard(this)">
-        <span><i class="fas fa-sitemap"></i> Systems Analysis</span>
-        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
-      </div>
-      <ul class="project-list">
-        <li>Use Case Diagrams</li>
-        <li>System Proposal Presentation</li>
+        <li><a href="projects/software-dev/TipCalculator.zip" download>Tip Calculator (Download ZIP)</a></li>
+        <li><a href="projects/software-dev/LetterDemo.zip" download>Letter Demo (Download ZIP)</a></li>
+        <li><a href="projects/software-dev/AdCreator.zip" download>Classified Ad Generator (Download ZIP)</a></li>
       </ul>
     </div>
     <div class="card">
@@ -163,8 +164,21 @@
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
       <ul class="project-list">
-        <li>Personal Portfolio Website</li>
-        <li>Basic Web Layout Project</li>
+        <li><a href="projects/web/client-site1.jpg" target="_blank">Client Site Screenshot 1 (JPG)</a></li>
+        <li><a href="projects/web/client-site2.jpg" target="_blank">Client Site Screenshot 2 (JPG)</a></li>
+        <li><a href="projects/web/wbs-diagram.jpg" target="_blank">WBS Diagram (JPG)</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <span><i class="fas fa-sitemap"></i> Systems Analysis</span>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="project-list">
+        <li><a href="projects/systems-analysis/asis.png" target="_blank">As-Is Diagram (PNG)</a></li>
+        <li><a href="projects/systems-analysis/tobe.png" target="_blank">To-Be Diagram (PNG)</a></li>
+        <li><a href="projects/systems-analysis/architecture.pdf" target="_blank">System Architecture (PDF)</a></li>
+        <li><a href="projects/systems-analysis/class-diagram.png" target="_blank">Class Diagram (PNG)</a></li>
       </ul>
     </div>
   </section>
@@ -177,4 +191,3 @@
   </script>
 </body>
 </html>
-
