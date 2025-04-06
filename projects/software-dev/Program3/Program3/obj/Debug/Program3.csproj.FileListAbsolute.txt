@@ -1,0 +1,6 @@
+J:\Program3\Program3\obj\Debug\Program3.csproj.AssemblyReference.cache
+J:\Program3\Program3\obj\Debug\Program3.csproj.SuggestedBindingRedirects.cache
+J:\Program3\Program3\obj\Debug\Program3.Form1.resources
+J:\Program3\Program3\obj\Debug\Program3.Properties.Resources.resources
+J:\Program3\Program3\obj\Debug\Program3.csproj.GenerateResource.cache
+J:\Program3\Program3\obj\Debug\Program3.csproj.CoreCompileInputs.cache
