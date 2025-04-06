@@ -92,7 +92,29 @@
       font-weight: bold;
     }
     .project-list a:hover { text-decoration: underline; }
-  </style>
+  
+<style>
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  }
+  .lightbox:target {
+    display: flex;
+  }
+</style>
+
+</style>
 </head>
 <body>
   <nav>
@@ -157,20 +179,98 @@
       </div>
       <div class="description">Screenshots and assets from a client website build</div>
       <ul class="project-list">
-        <li><a href="projects/web/Blue Mesa Checkout.JPG" target="_blank">Blue Mesa Checkout</a></li>
-        <li><a href="projects/web/Blue Mesa Trip.JPG" target="_blank">Blue Mesa Trip</a></li>
-        <li><a href="projects/web/Checkout.JPG" target="_blank">Checkout Page</a></li>
-        <li><a href="projects/web/Expedia and Trip cancel policy.JPG" target="_blank">Expedia + Cancel Policy</a></li>
-        <li><a href="projects/web/Guide Page.JPG" target="_blank">Guide Page</a></li>
-        <li><a href="projects/web/GuideBookPro_WBS.pdf" target="_blank">WBS Diagram</a></li>
-        <li><a href="projects/web/Home Page Header.JPG" target="_blank">Home Page Header</a></li>
-        <li><a href="projects/web/Map Working.JPG" target="_blank">Map Functionality</a></li>
-        <li><a href="projects/web/Merch.JPG" target="_blank">Merch Page</a></li>
-        <li><a href="projects/web/Show Off Catch.JPG" target="_blank">Catch Showcase</a></li>
-        <li><a href="projects/web/Species.JPG" target="_blank">Species Page</a></li>
-        <li><a href="projects/web/Specis and about Home.JPG" target="_blank">Species & About</a></li>
-        <li><a href="projects/web/Trip List.JPG" target="_blank">Trip List</a></li>
-        <li><a href="projects/web/User Flow Diagram .JPEG" target="_blank">User Flow Diagram</a></li>
+
+        <li>
+          <a href="#img1"><img src="projects/web/Blue Mesa Checkout.JPG" alt="Blue Mesa Checkout" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img1">
+          <a href="#"><img src="projects/web/Blue Mesa Checkout.JPG" alt="Blue Mesa Checkout Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img2"><img src="projects/web/Blue Mesa Trip.JPG" alt="Blue Mesa Trip" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img2">
+          <a href="#"><img src="projects/web/Blue Mesa Trip.JPG" alt="Blue Mesa Trip Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img3"><img src="projects/web/Checkout.JPG" alt="Checkout" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img3">
+          <a href="#"><img src="projects/web/Checkout.JPG" alt="Checkout Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img4"><img src="projects/web/Expedia and Trip cancel policy.JPG" alt="Expedia and Trip cancel policy" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img4">
+          <a href="#"><img src="projects/web/Expedia and Trip cancel policy.JPG" alt="Expedia and Trip cancel policy Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img5"><img src="projects/web/Guide Page.JPG" alt="Guide Page" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img5">
+          <a href="#"><img src="projects/web/Guide Page.JPG" alt="Guide Page Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img6"><img src="projects/web/Home Page Header.JPG" alt="Home Page Header" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img6">
+          <a href="#"><img src="projects/web/Home Page Header.JPG" alt="Home Page Header Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img7"><img src="projects/web/Map Working.JPG" alt="Map Working" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img7">
+          <a href="#"><img src="projects/web/Map Working.JPG" alt="Map Working Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img8"><img src="projects/web/Merch.JPG" alt="Merch" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img8">
+          <a href="#"><img src="projects/web/Merch.JPG" alt="Merch Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img9"><img src="projects/web/Show Off Catch.JPG" alt="Show Off Catch" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img9">
+          <a href="#"><img src="projects/web/Show Off Catch.JPG" alt="Show Off Catch Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img10"><img src="projects/web/Species.JPG" alt="Species" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img10">
+          <a href="#"><img src="projects/web/Species.JPG" alt="Species Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img11"><img src="projects/web/Specis and about Home.JPG" alt="Specis and about Home" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img11">
+          <a href="#"><img src="projects/web/Specis and about Home.JPG" alt="Specis and about Home Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img12"><img src="projects/web/Trip List.JPG" alt="Trip List" style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img12">
+          <a href="#"><img src="projects/web/Trip List.JPG" alt="Trip List Fullscreen" /></a>
+        </div>
+    
+        <li>
+          <a href="#img13"><img src="projects/web/User Flow Diagram .jpeg" alt="User Flow Diagram " style="max-width:120px; border-radius:6px; border:1px solid #ccc; margin: 0.5rem;"></a>
+        </li>
+        <div class="lightbox" id="img13">
+          <a href="#"><img src="projects/web/User Flow Diagram .jpeg" alt="User Flow Diagram  Fullscreen" /></a>
+        </div>
+    
       </ul>
     </div>
 
