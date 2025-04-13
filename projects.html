@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,12 @@
   <title>Projects | Jackson Hallahan</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #111; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+    }
     nav {
       background-color: black;
       padding: 1rem 2rem;
@@ -17,7 +21,11 @@
       top: 0;
       z-index: 1000;
     }
-    .nav-title { color: white; font-weight: bold; font-size: 1rem; }
+    .nav-title {
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
     .nav-links {
       display: flex;
       gap: 1.5rem;
@@ -39,7 +47,10 @@
       width: 100%;
       background-color: #FFD700;
     }
-    header { text-align: center; padding: 2rem 1rem 0; }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 0;
+    }
     .container {
       display: flex;
       flex-direction: column;
@@ -67,9 +78,15 @@
       font-size: 1.1rem;
       cursor: pointer;
     }
-    .card-header i { margin-right: 0.5rem; }
-    .chevron { transition: transform 0.3s ease; }
-    .card.open .chevron { transform: rotate(90deg); }
+    .card-header i {
+      margin-right: 0.5rem;
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    .card.open .chevron {
+      transform: rotate(90deg);
+    }
     .description {
       font-size: 0.9rem;
       color: #555;
@@ -91,30 +108,36 @@
       color: #0077cc;
       font-weight: bold;
     }
-    .project-list a:hover { text-decoration: underline; }
-  
-<style>
-  .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-  }
-  .lightbox img {
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.1);
-  }
-  .lightbox:target {
-    display: flex;
-  }
-</style>
-
-</style>
+    .project-list a:hover {
+      text-decoration: underline;
+    }
+    .nested-section {
+      margin-top: 1rem;
+    }
+    .nested-header {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: bold;
+      padding: 0.3rem 0;
+    }
+    .nested-list {
+      display: none;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+    .nested-section.open .nested-list {
+      display: block;
+    }
+    .nested-section .chevron {
+      transition: transform 0.3s ease;
+    }
+    .nested-section.open .chevron {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -126,9 +149,7 @@
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-
   <header><h1>Project Categories</h1></header>
-
   <section class="container">
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
@@ -143,7 +164,6 @@
         <li><a href="projects/security/SQL-pentest-lab.pdf" target="_blank">SQL Pentest Lab</a></li>
       </ul>
     </div>
-
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <span><i class="fas fa-database"></i> Database Design</span>
@@ -158,7 +178,6 @@
         <li><a href="projects/database/Tiny College DB.pdf" target="_blank">Tiny College DB</a></li>
       </ul>
     </div>
-
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <span><i class="fas fa-code"></i> Software Dev</span>
@@ -171,48 +190,42 @@
         <li><a href="projects/software-dev/MINDTAP 8-10.docx" target="_blank">TipCalculator, LetterDemo Labs</a></li>
       </ul>
     </div>
-
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <span><i class="fas fa-globe"></i> Web</span>
-        
-<span class="chevron"><i class="fas fa-chevron-right"></i></span>
-      </div>
-      <div class="description">Visual deliverables from the design and development of a client-facing website team project</div>
-      <ul class="project-list">
-
-<div class="nested-section">
-      <div class="nested-header" onclick="toggleNested(this)">
-        <strong>Site Screenshots</strong>
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
-      <ul class="nested-list">
-        <li><a href="projects/web/Blue Mesa Checkout.JPG" target="_blank">Blue Mesa Checkout</a> – Product purchase interface design</li>
-        <li><a href="projects/web/Blue Mesa Trip.JPG" target="_blank">Blue Mesa Trip</a> – Individual trip detail page layout</li>
-        <li><a href="projects/web/Checkout.JPG" target="_blank">Checkout Page</a> – Final step in user purchase flow</li>
-        <li><a href="projects/web/Expedia and Trip cancel policy.JPG" target="_blank">Expedia + Cancel Policy</a> – Competitive analysis of booking and refund policies</li>
-        <li><a href="projects/web/Guide Page.JPG" target="_blank">Guide Page</a> – Informational page for guide services</li>
-        <li><a href="projects/web/Home Page Header.JPG" target="_blank">Home Page Header</a> – Branding and navigation section of landing page</li>
-        <li><a href="projects/web/Map Working.JPG" target="_blank">Map Functionality</a> – Interactive feature for locating trips or guides</li>
-        <li><a href="projects/web/Merch.JPG" target="_blank">Merch Page</a> – Online storefront showcasing branded gear</li>
-        <li><a href="projects/web/Show Off Catch.JPG" target="_blank">Catch Showcase</a> – Visual gallery of client-submitted fishing catches</li>
-        <li><a href="projects/web/Species.JPG" target="_blank">Species Page</a> – Educational content on local fish species</li>
-        <li><a href="projects/web/Specis and about Home.JPG" target="_blank">Species & About</a> – Combined section highlighting biodiversity and company info</li>
-        <li><a href="projects/web/Trip List.JPG" target="_blank">Trip List</a> – Display of available fishing trips</li>
-      </ul>
-    </div>
-
+      <div class="description">Visual deliverables from the design and development of a client-facing website project.</div>
+      <div class="project-list">
+        <div class="nested-section">
+          <div class="nested-header" onclick="toggleNested(this)">
+            <strong>Site Screenshots</strong>
+            <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+          </div>
+          <ul class="nested-list">
+            <li><a href="projects/web/Blue Mesa Checkout.JPG" target="_blank">Blue Mesa Checkout</a> – Product purchase interface design</li>
+            <li><a href="projects/web/Blue Mesa Trip.JPG" target="_blank">Blue Mesa Trip</a> – Individual trip detail page layout</li>
+            <li><a href="projects/web/Checkout.JPG" target="_blank">Checkout Page</a> – Final step in user purchase flow</li>
+            <li><a href="projects/web/Expedia and Trip cancel policy.JPG" target="_blank">Expedia + Cancel Policy</a> – Competitive analysis of booking and refund policies</li>
+            <li><a href="projects/web/Guide Page.JPG" target="_blank">Guide Page</a> – Informational page for guide services</li>
+            <li><a href="projects/web/Home Page Header.JPG" target="_blank">Home Page Header</a> – Branding and navigation section of landing page</li>
+            <li><a href="projects/web/Map Working.JPG" target="_blank">Map Functionality</a> – Interactive feature for locating trips or guides</li>
+            <li><a href="projects/web/Merch.JPG" target="_blank">Merch Page</a> – Online storefront showcasing branded gear</li>
+            <li><a href="projects/web/Show Off Catch.JPG" target="_blank">Catch Showcase</a> – Visual gallery of client-submitted fishing catches</li>
+            <li><a href="projects/web/Species.JPG" target="_blank">Species Page</a> – Educational content on local fish species</li>
+            <li><a href="projects/web/Specis and about Home.JPG" target="_blank">Species & About</a> – Combined section highlighting biodiversity and company info</li>
+            <li><a href="projects/web/Trip List.JPG" target="_blank">Trip List</a> – Display of available fishing trips</li>
+          </ul>
+        </div>
         <div style="margin-top: 1rem;">
-      <strong>Planning Diagrams</strong>
-      <ul>
-        <li><a href="projects/web/GuideBookPro_WBS.pdf" target="_blank">WBS Diagram</a> – Project task breakdown for site build</li>
-        <li><a href="projects/web/User Flow Diagram .JPEG" target="_blank">User Flow Diagram</a> – Flowchart of site navigation and user interactions</li>
-      </ul>
+          <strong>Planning Diagrams</strong>
+          <ul>
+            <li><a href="projects/web/GuideBookPro_WBS.pdf" target="_blank">WBS Diagram</a> – Project task breakdown for site build</li>
+            <li><a href="projects/web/User Flow Diagram .JPEG" target="_blank">User Flow Diagram</a> – Flowchart of site navigation and user interactions</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-  </div>
-</div>
-
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <span><i class="fas fa-sitemap"></i> Systems Analysis</span>
@@ -220,24 +233,21 @@
       </div>
       <div class="description">Structured diagrams supporting systems analysis and design for a proposed client website redevelopment</div>
       <ul class="project-list">
-        <li><a href="projects/systems-analysis/As-Is_ GuidebookCo.png" target="_blank">As-Is Diagram</a> - Visualizes the existing process structure and system limitations of the current site
-        </li>
-        <li><a href="projects/systems-analysis/Class Diagram.png" target="_blank">Class Diagram</a> - Blueprint of all classes, their properties, and how they connect in the new application design
-        </li>
-        <li><a href="projects/systems-analysis/System Architecture Diagram.png" target="_blank">System Architecture</a> - Defines the structural blueprint of hardware, software, and integration points for the new site
-        </li>
-        <li><a href="projects/systems-analysis/To-Be_ Guidebook Pro.png" target="_blank">To-Be Diagram</a> - Outlines the optimized architecture and user experience of the new platform
-        </li>
+        <li><a href="projects/systems-analysis/As-Is_ GuidebookCo.png" target="_blank">As-Is Diagram</a> – Visualizes the existing process structure and system limitations of the current site</li>
+        <li><a href="projects/systems-analysis/Class Diagram.png" target="_blank">Class Diagram</a> – Blueprint of all classes, their properties, and how they connect in the new application design</li>
+        <li><a href="projects/systems-analysis/System Architecture Diagram.png" target="_blank">System Architecture</a> – Defines the structural blueprint of hardware, software, and integration points for the new site</li>
+        <li><a href="projects/systems-analysis/To-Be_ Guidebook Pro.png" target="_blank">To-Be Diagram</a> – Outlines the optimized architecture and user experience of the new platform</li>
       </ul>
     </div>
-
-    <!-- Cards will be inserted here -->
   </section>
-
   <script>
     function toggleCard(header) {
       const card = header.closest(".card");
       card.classList.toggle("open");
+    }
+    function toggleNested(header) {
+      const section = header.closest(".nested-section");
+      section.classList.toggle("open");
     }
   </script>
 </body>
