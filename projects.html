@@ -144,35 +144,59 @@
   <header><h1>Project Categories</h1></header>
   <section class="container">
     <div class="card">
-      <div class="card-header" onclick="toggleCard(this)">
-        <span><i class="fas fa-shield-alt"></i> Security</span>
+  <div class="card-header" onclick="toggleCard(this)">
+    <span><i class="fas fa-shield-alt"></i> Security</span>
+    <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+  </div>
+  <div class="description">Hands-on security labs focused on network defense, system hardening, and database vulnerability testing</div>
+  <div class="project-list">
+
+    <div class="nested-section">
+      <div class="nested-header" onclick="toggleNested(this)">
+        <strong>Network Security</strong>
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
-      <div class="description">Hands-on security labs focused on network defense, system hardening, and database vulnerability testing</div>
-      <ul class="project-list">
-        <li><a href="projects/security/firewall-lab.pdf" target="_blank">Firewall Lab</a> - Configured access control rules to secure a network perimeter
-        </li>
-        <li><a href="projects/security/routing-lab.pdf" target="_blank">Routing Lab</a> - Explored packet paths and vulnerabilities through route tracing
-        </li>
-        <li><a href="projects/security/SID-lab.pdf" target="_blank">SID Lab</a> - Hardened Windows systems by applying secure SID configuration practices
-        </li>
-        <li><a href="projects/security/SQL-pentest-lab.pdf" target="_blank">SQL Pentest Lab</a> - Simulated SQL injection attacks and implemented input sanitization
-        </li>
+      <ul class="nested-list">
+        <li><a href="projects/security/firewall-lab.pdf" target="_blank">Firewall Lab</a> – Configured access control rules to secure a network perimeter</li>
+        <li><a href="projects/security/routing-lab.pdf" target="_blank">Routing Lab</a> – Explored packet paths and vulnerabilities through route tracing</li>
       </ul>
     </div>
-    <div class="card">
-      <div class="card-header" onclick="toggleCard(this)">
-        <span><i class="fas fa-sitemap"></i> Systems Analysis</span>
+
+    <div class="nested-section">
+      <div class="nested-header" onclick="toggleNested(this)">
+        <strong>System Security</strong>
         <span class="chevron"><i class="fas fa-chevron-right"></i></span>
       </div>
-      <div class="description">Structured diagrams supporting systems analysis and design for a proposed client website redevelopment</div>
-      <ul class="project-list">
-        <li><a href="projects/systems-analysis/As-Is_ GuidebookCo.png" target="_blank">As-Is Diagram</a> – Visualizes the existing process structure and system limitations of the current site</li>
-        <li><a href="projects/systems-analysis/Class Diagram.png" target="_blank">Class Diagram</a> – Blueprint of all classes, their properties, and how they connect in the new application design</li>
-        <li><a href="projects/systems-analysis/System Architecture Diagram.png" target="_blank">System Architecture</a> – Defines the structural blueprint of hardware, software, and integration points for the new site</li>
-        <li><a href="projects/systems-analysis/To-Be_ Guidebook Pro.png" target="_blank">To-Be Diagram</a> – Outlines the optimized architecture and user experience of the new platform</li>
+      <ul class="nested-list">
+        <li><a href="projects/security/SID-lab.pdf" target="_blank">SID Lab</a> – Hardened Windows systems by applying secure SID configuration practices</li>
       </ul>
     </div>
+
+    <div class="nested-section">
+      <div class="nested-header" onclick="toggleNested(this)">
+        <strong>Database Security & Pentesting</strong>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="nested-list">
+        <li><a href="projects/security/SQL-pentest-lab.pdf" target="_blank">SQL Pentest Lab</a> – Simulated SQL injection attacks and implemented input sanitization</li>
+        <li><a href="projects/security/TermPaper_AIandDatabaseSecurity.docx" target="_blank">AI & Database Security Research (DOCX)</a> – Explores AI-driven injection, impersonation, and password threats</li>
+        <li><a href="https://docs.google.com/presentation/d/1fJRKUa1BahI2QATJInq3Ml3DvPyIEOga/edit?usp=drive_link" target="_blank">AI & Database Security Presentation (PPTX)</a> – Covers top 3 AI-based database risks with mitigation plans</li>
+      </ul>
+    </div>
+
+    <div class="nested-section">
+      <div class="nested-header" onclick="toggleNested(this)">
+        <strong>Malware & Threat Reports</strong>
+        <span class="chevron"><i class="fas fa-chevron-right"></i></span>
+      </div>
+      <ul class="nested-list">
+        <li><a href="projects/security/FinalReport_Ransomware.docx" target="_blank">Ransomware Report</a> – Deep dive into attack vectors, real cases, and emerging ransomware trends</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <span><i class="fas fa-database"></i> Database Design</span>
